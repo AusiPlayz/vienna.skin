@@ -12,8 +12,10 @@ body:
     description: "Please describe the Bug in detail"
   validations:
     required: true
-- type: markdown
-  id: marktwoo
+- type: checkboxes
+  id: checked
   attributes:
-    value: |
-      Thanks for taking the time to fill out this bug! If you need real-time help, join us on Discord.
+    label: Agreement
+    options:
+      - label: I have accepted the TOS!
+      required: true

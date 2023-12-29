@@ -12,10 +12,10 @@ body:
     description: "Please describe the Bug in detail"
   validations:
     required: true
-- type: checkboxes
-  id: checked
-  attributes:
-    label: Agreement
-    options:
-      - label: I have accepted the TOS!
-      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Agreement
+      options:
+        - label: I have ensured that this subdomain is mine
+          required: true

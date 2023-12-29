@@ -6,9 +6,11 @@ projects: []
 assignees: []
 body:
 - type: markdown
+  id: markone
   attributes:
     value: "## Welcome!"
 - type: markdown
+  id: marktwoo
   attributes:
     value: |
       Thanks for taking the time to fill out this bug! If you need real-time help, join us on Discord.

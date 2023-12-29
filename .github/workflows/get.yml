@@ -28,5 +28,5 @@ jobs:
             comment=$(cut -d "|" -f 2 data.csv)
             reason=$(cut -d "|" -f 1 data.csv)
             domain=$(cut -d "|" -f 3 data.csv)
-            gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} -t " Get Info $domain" --add-label "domain info"
+            gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} -t "🛠 Get Info $domain" --add-label "domain info"
             gh issue close https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} --comment "${comment//"\\n"/$'\n'}" --reason "$reason"

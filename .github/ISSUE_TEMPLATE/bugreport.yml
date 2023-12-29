@@ -3,7 +3,7 @@ description: "Report a Bug"
 title: "Bug Report"
 labels: ["bug"]
 projects: []
-assignees: []
+assignees: ["nat"]
 body:
   - type: input
     id: bugtitle

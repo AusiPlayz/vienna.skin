@@ -27,5 +27,5 @@ body:
       options:
         - label: I have ensured that no one registered this subdomain
           required: true
-        - label: I have ensured that I did not reach the five subdomain limit
+        - label: I have ensured that I did not reach the 3 subdomain limit
           required: true

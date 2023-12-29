@@ -5,13 +5,13 @@ labels: ["bug"]
 projects: []
 assignees: []
 body:
-- type: input
-  id: bugtitle
-  attributes:
-    label: "The Bug"
-    description: "Please describe the Bug in detail"
-  validations:
-    required: true
+  - type: input
+    id: bugtitle
+    attributes:
+      label: Bug Report
+      description: Where should the domain point to? You can type in either an IP address or a domain, and it will automatically detect whether to use A, AAAA, or CNAME.
+    validations:
+      required: true
   - type: checkboxes
     id: checked
     attributes:

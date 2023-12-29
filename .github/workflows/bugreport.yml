@@ -19,6 +19,12 @@ jobs:
     env:
         EVENT_ISSUE_BODY: ${{ github.event.issue.body }}
         EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
-    run: |
-            gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{github.event.issue.number }} -t " Reported Bug" --add-label "bug"
     
+      run: |
+            npm i cloudflare
+            node --no-deprecation list > data.csv
+            cat data.csv
+            comment=$(cut -d "|" -f 2 data.csv)
+            reason=$(cut -d "|" -f 1 data.csv)
+            gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} -t "🌈 Bug Report $EVENT_USER_LOGIN" --add-label "bug"
+            gh issue close https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} --comment "${comment//"\\n"/$'\n'}" --reason "$reason"

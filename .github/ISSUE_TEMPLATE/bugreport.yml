@@ -6,10 +6,12 @@ projects: []
 assignees: []
 body:
 - type: input
-  id: markone
+  id: bugtitle
   attributes:
-    label: "# Gay"
-    value: "## Welcome!"
+    label: "The Bug"
+    description: "Please describe the Bug in detail"
+  validations:
+    required: true
 - type: markdown
   id: marktwoo
   attributes:

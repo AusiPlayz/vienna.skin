@@ -19,7 +19,7 @@ jobs:
       env:
         EVENT_ISSUE_BODY: ${{ github.event.issue.body }}
         EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
-        CF_TOKEN: "c58844f210cce608fe5ad0f78b9b6e6071170"
+        CF_TOKEN: ${{ secrets.CF_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
             npm i cloudflare

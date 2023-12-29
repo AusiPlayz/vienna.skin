@@ -13,3 +13,12 @@ body:
       value: ".vienna.skin"
     validations:
       required: true
+  - type: input
+    id: dns
+    attributes:
+      label: DNS Record
+      description: Where should the domain point to? You can type in either an IP address or a domain, and it will automatically detect whether to use A, AAAA, or CNAME.
+      placeholder: "dns.google"
+    validations:
+      required: true
+  

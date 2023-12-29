@@ -5,7 +5,7 @@ labels: ["bug"]
 projects: []
 assignees: []
 body:
-- type: markdown
+- type: inpit
   id: markone
   attributes:
     value: "## Welcome!"

@@ -22,6 +22,10 @@ jobs:
         CF_TOKEN: ${{ secrets.CF_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-            
+            npm i cloudflare
+            node --no-deprecation list > data.csv
+            cat data.csv
+            comment="dev"
+            reason=$(cut -d "|" -f 1 data.csv)
             gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} -t " List $EVENT_USER_LOGIN" --add-label "domain list"
-            gh issue close https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} --comment "${comment//"\\n"/$'\n'}" --reason "$reason"
+            gh issue close https://github.com/AusiPlayz/vienna.skin/issues/${{ github.event.issue.number }} --comment "${comment//"\\n"/$'\n'}" --reason "Gay Test"

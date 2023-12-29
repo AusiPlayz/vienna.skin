@@ -55,9 +55,9 @@ cf.dnsRecords.browse("ee3044599a63e7a5b78d0da8855c7d2b").then((records) => {
   const countFilter = records.result.filter((record) => {
     return record.comment == process.env.EVENT_USER_LOGIN
   })
-  if (countFilter.length == 5) {
+  if (countFilter.length == 3) {
     return console.log(
-      "not planned|You have reached your 5 subdomain limit, please consider deleting some.|"+array[1][1]
+      "not planned|You have reached your 3 subdomain limit, please consider deleting some.|"+array[1][1]
     )
   }
   var type = "invalid"

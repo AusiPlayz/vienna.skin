@@ -1,0 +1,21 @@
+name: "Bug Report"
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  Register:
+    runs-on: ubuntu-latest
+    if: github.event.issue.title == 'List'
+    permissions:
+      issues: write
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2.3.1
+
+    - name: Report the Bug
+    run: |
+            gh issue edit https://github.com/AusiPlayz/vienna.skin/issues/${{github.event.issue.number }} -t " Reported Bug" --add-label "bug"
+    

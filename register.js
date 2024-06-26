@@ -25,7 +25,7 @@ if (
     !array[2][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
     !nonascii.test(array[2][1]) &&
-    array[1][1] != ".vienna.skin" &&
+    array[1][1] != ".zeqa.xyz" &&
     array[1][1].endsWith(".zeqa.xyz")
   )
 ) {

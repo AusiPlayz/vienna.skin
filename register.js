@@ -30,7 +30,7 @@ if (
   )
 ) {
   return console.log(
-    "completed|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
+    "not planned|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
   )
 }
 var flare = require("cloudflare")

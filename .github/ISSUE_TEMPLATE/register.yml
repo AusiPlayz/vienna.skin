@@ -10,7 +10,7 @@ body:
     attributes:
       label: Subdomain Name
       description: What subdomain do you want to register? ex. etwas.vienna.skin
-      value: ".vienna.skin"
+      value: ".zeqa.xyz"
     validations:
       required: true
   - type: input

@@ -9,7 +9,7 @@ body:
     id: domain
     attributes:
       label: Subdomain Name
-      description: What subdomain do you want to get info on? ex. etwas.vienna.skin
-      value: ".vienna.skin"
+      description: What subdomain do you want to get info on? ex. some.zeqa.xyz
+      value: ".zeqa.xyz"
     validations:
       required: true

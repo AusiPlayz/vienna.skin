@@ -8,18 +8,18 @@ array[3][1] = original.split("\n")[0]
 array[3].push(original.split("\n")[1])
 if (
   !(
-    array.length == 4 &&
-    array[0].length == 1 &&
-    array[0][0] == "" &&
-    array[1][0] == "Subdomain Name" &&
-    array[1].length == 3 &&
-    array[2][0] == "DNS Record" &&
-    array[2].length == 3 &&
-    array[3].length == 3 &&
-    array[3][0] == "Agreement" &&
-    array[3][1] ==
+    array.length === 4 &&
+    array[0].length === 1 &&
+    array[0][0] === "" &&
+    array[1][0] === "Subdomain Name" &&
+    array[1].length === 3 &&
+    array[2][0] === "DNS Record" &&
+    array[2].length === 3 &&
+    array[3].length === 3 &&
+    array[3][0] === "Agreement" &&
+    array[3][1] ===
       "- [X] I have ensured that no one registered this subdomain" &&
-    array[3][2] ==
+    array[3][2] ===
       "- [X] I have ensured that I did not reach the five subdomain limit" &&
     !array[1][1].includes(" ") &&
     !array[2][1].includes(" ") &&
@@ -30,7 +30,7 @@ if (
   )
 ) {
   return console.log(
-    "not planned|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
+    "completed|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
   )
 }
 var flare = require("cloudflare")
@@ -53,9 +53,9 @@ cf.dnsRecords.browse("cba3c3c0bb7046a285855cc1c9208acb").then((records) => {
     )
   }
   const countFilter = records.result.filter((record) => {
-    return record.comment == process.env.EVENT_USER_LOGIN
+    return record.comment === process.env.EVENT_USER_LOGIN
   })
-  if (countFilter.length == 3) {
+  if (countFilter.length === 3) {
     return console.log(
       "not planned|You have reached your 3 subdomain limit, please consider deleting some.|"+array[1][1]
     )
@@ -64,8 +64,8 @@ cf.dnsRecords.browse("cba3c3c0bb7046a285855cc1c9208acb").then((records) => {
   if (hostname.test(array[2][1])) type = "CNAME";
   if (ipv4.test(array[2][1])) type = "A";
   if (ipv6.test(array[2][1])) type = "AAAA";
-  if (type == "hostname"&&!array[2][1].includes(".")) type = "invalid"
-  if (type == "invalid") {
+  if (type === "hostname"&&!array[2][1].includes(".")) type = "invalid"
+  if (type === "invalid") {
     return console.log(
       "not planned|The record destination you entered is invalid!|"+array[1][1]
     )

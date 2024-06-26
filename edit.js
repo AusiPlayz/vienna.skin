@@ -28,7 +28,7 @@ if (
   )
 ) {
   return console.log(
-    "error 250|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
+    "not planned|Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!|"+array[1][1]
   )
 }
 var flare = require("cloudflare")
@@ -56,7 +56,7 @@ cf.dnsRecords.browse("cba3c3c0bb7046a285855cc1c9208acb").then((records) => {
     if (type == "hostname" && !array[1][1].includes(".")) type = "invalid"
     if (type == "invalid") {
       return console.log(
-        "nuttensohn|The record destination you entered is invalid!|"+array[1][1]
+        "not planned|The record destination you entered is invalid!|"+array[1][1]
       )
     }
     cf.dnsRecords
@@ -80,7 +80,7 @@ cf.dnsRecords.browse("cba3c3c0bb7046a285855cc1c9208acb").then((records) => {
       })
   } else {
     return console.log(
-      "du dummer hrs|This subdomain is not yours or the subdomain is not found!|"+array[1][1]
+      "not planned|This subdomain is not yours or the subdomain is not found!|"+array[1][1]
     )
   }
 })
